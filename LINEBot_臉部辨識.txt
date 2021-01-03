@@ -1,0 +1,30 @@
+影片:https://youtu.be/BUuRWeyH7Ao
+
+01. !python --version   <---確定你的python版本
+02. 依照你的python版本下載dlib
+      3.6.x-->cp36
+      3.7.x-->cp37
+      3.8.x-->cp38
+
+#影像辨識相關package
+03. !pip install f:\dlib-19.19.0-cp38-cp38-win_amd64.whl   <---路徑是你檔案所在的位置
+04. !pip install scikit-image
+05. !pip install opencv-python
+
+#LINE bot package
+06. !pip install flask
+07. !pip install line-bot-sdk #LINE Bot的開發環境
+
+08. 修改程式
+09. 啟動ngrok
+10. 設定LINE Bot
+11. 準備好相關檔案,如把照片放置rec目錄中,
+      及準備好shape_predictor_68_face_landmarks.dat
+                 dlib_face_recognition_resnet_model_v1.dat
+---
+if len(descriptors) != len(candidate):
+    print("某張影像無法偵測出人臉!!!!")
+    print("請確認後再執行!!!")
+    print("共有:",len(candidate),"張,只辨識出:",len(descriptors),"張")
+    sys.exit(0)#若所有的影像無法完整辨識出,再跳出程式,由人工刪除檔案
+print("共有:",len(candidate),"張,辨識出:",len(descriptors),"張")
