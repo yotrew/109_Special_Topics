@@ -1,4 +1,5 @@
 影片:https://youtu.be/BUuRWeyH7Ao
+上課資料網址:http://github.com/yotrew
 
 01. !python --version   <---確定你的python版本
 02. 依照你的python版本下載dlib
